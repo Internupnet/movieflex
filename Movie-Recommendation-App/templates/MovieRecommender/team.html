@@ -1,0 +1,215 @@
+{% extends 'MovieRecommender/base.html' %}
+{% block title %}Team{% endblock title %}
+
+{% block css %}
+body{
+    background: rgb(35,37,38);
+background: linear-gradient(99deg, rgba(35,37,38,1) 0%, rgba(65,67,69,1) 100%);
+color: white;
+      }
+
+.our-team .team-row {
+    margin-left: -40px;
+    margin-right: -40px;
+  }
+  
+  .our-team .team-wrap {
+    padding: 0 40px;
+  }
+  
+  .our-team .container-fluid {
+    padding: 0 50px;
+  }
+  
+  .team-img img {
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .team-member,
+  .team-img {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .team-title {
+    margin: 30px 0 7px;
+  }
+  
+  .overlay {
+    background-color: rgba(20,20,20,.7);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+  }
+  
+  .team-details {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    padding: 5%;
+    overflow: hidden;
+    width: 100%;
+    z-index: 2;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+  }
+  
+  .team-details p {
+    color: #fff;
+  }
+  
+  .team-img:hover .team-details {
+    opacity: 1;
+    margin-top: -80px;
+  }
+  
+  .team-img:hover .overlay {
+    opacity: 1;
+  }
+  
+  .socials a {
+    display: inline-block;
+    width: 37px;
+    height: 37px;
+    background-color: transparent;
+  }
+  
+  .socials i {
+    line-height: 37px;
+    color: #616161;
+    font-size: 14px;
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    text-align: center;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+  }
+  
+  .team-details .socials i {
+      color: #fff;
+  }
+  
+  .socials a:hover i {
+    color: #fff;
+    background-color: #355c7d;
+  }
+  {% endblock css %}
+  {% block content %}
+
+<div class="container">
+    <br>
+    <br>
+
+    <div class="row heading">
+    </div>
+      <div class="col-md-6 col-md-offset-3">
+        <h2 class="text-center bottom-line">Meet Our Team</h2>
+        <p class="subheading text-center">Creative Nerds</p>
+    </div>
+  
+    <div class="row team-row">
+  
+      <div class="col-md-4 col-sm-6 team-wrap">
+        <div class="team-member text-center">
+          <div class="team-img">
+            <img src="/static/Shreyash.png" alt="">
+            <div class="overlay">
+              <div class="team-details text-center">
+                <p>
+                  From django to web, Database
+                </p>
+                <div class="socials mt-20">
+                  <a href="https://www.facebook.com/shreyash.chavan.549"><i class="fa fa-facebook"></i></a>
+                  <a href="https://twitter.com/shreyhacks"><i class="fa fa-twitter"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h6 class="team-title">Shreyash Chavan</h6>
+          <span>Tech Design</span>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 team-wrap">
+        <div class="team-member text-center">
+          <div class="team-img">
+            <img src="/static/Tejas.png" alt="">
+            <div class="overlay">
+              <div class="team-details text-center">
+                <p>
+                  I used to design graphics and some of HTML for project
+                </p>
+                <div class="socials mt-20">
+                  <a href="https://www.facebook.com/tejas.chougule.1840"><i class="fa fa-facebook"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h6 class="team-title">Tejas Chougule</h6>
+          <span>Designs</span>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 team-wrap">
+        <div class="team-member last text-center">
+          <div class="team-img">
+            <img src="/static/satyajeet.png" alt="">
+            <div class="overlay">
+              <div class="team-details text-center">
+                <p>
+                  I used to collect and add data to our Recommender systems
+                </p>
+                <div class="socials mt-20">
+                  <a href="https://www.instagram.com/sam_sawant__09"><i class="fa fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h6 class="team-title">Satyajeet Sawant</h6>
+          <span>Movies data</span>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6 team-wrap">
+        <div class="team-member last text-center">
+          <div class="team-img">
+            <img src="http://deothemes.com/envato/enigma/html/img/team_3.jpg" alt="">
+            <div class="overlay">
+              <div class="team-details text-center">
+                <p>
+                  I managed socials of this program
+                </p>
+                <div class="socials mt-20">
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa fa-google-plus"></i></a>
+                  <a href="#"><i class="fa fa-envelope"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h6 class="team-title">Siddhesh Gurav</h6>
+          <span>Social</span>
+        </div>
+      </div>
+  <br>
+
+    </div>
+  </div>
+  {% endblock content %}
